@@ -7,7 +7,7 @@ const PapularProduct = () => {
   const filterPro = product.filter((item) => item.rating.rate >= 4);
 
   return (
-    <div className="">
+    <div className="hidden md:block">
       <div className="py-2 font-bold text-xl">papular products</div>
       <div className="grid grid-cols-2 gap-x-2 gap-y-4 mt-2">
         {filterPro.map((item, index) => {

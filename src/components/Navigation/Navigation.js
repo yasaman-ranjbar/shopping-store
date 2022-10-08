@@ -20,14 +20,14 @@ const Navigation = () => {
 
   return (
     <div className="bg-white py-3 md:px-[85px]">
-      <div className="flex item-center justify-between pl-4 text-lg gap-10">
+      <div className="flex item-center justify-between pl-4 text-lg gap-2 md:gap-10">
         {/* menu */}
         <div className="flex items-center gap-10">
           <button onClick={openMenuDrawer}>
             <GrMenu  className="text-2xl" />
           </button>
           <Link to="/">
-            <span className="md:text-3xl">LOGO</span>
+            <span className="hidden md:block md:text-3xl">LOGO</span>
           </Link>
         </div>
 
@@ -36,10 +36,10 @@ const Navigation = () => {
           <SearchBox/>
         </div>
 
-        <div className="flex items-center pr-4">
+        <div className="flex items-center  pr-1 md:pr-4">
           {/* cart */}
           <div className="">
-            <Link to="/cart" className="group m-2 flex items-center ">
+            <Link to="/cart" className="m-2 flex items-center">
               <AiOutlineShopping
                 className="h-6 w-6 flex-shrink-0 text-gray-600 group-hover:text-gray-500"
                 aria-hidden="true"

@@ -5,9 +5,7 @@ import SideBar from "../../components/SideBar/SideBar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
-import Products from "../../components/Products/Products.js"
-
-
+import Products from "../../components/Products/Products.js";
 
 const ProductsPage = () => {
   const route = useLocation();
@@ -40,22 +38,25 @@ const ProductsPage = () => {
     });
   }, []);
 
-
   return (
     <Layout>
       <Breadcrumb title={location} />
       <div className="grid grid-cols-12 gap-8 px-4 bg-white py-10">
         <div className="col-span-3 hidden md:block">
-          <SideBar  filterHandler={filterHandler} filterValue={filterValue}/>
+          <SideBar filterHandler={filterHandler} filterValue={filterValue} />
         </div>
+
         <div className="col-span-12 md:col-span-9">
-        {loading ? (
-                <div className="flex flex-wrap items-center justify-center">
-                  <ReactLoading type="spinningBubbles" color="#3b82f6" />
-                </div>
-              ) : (
-                <Products product={product}/>
-              )}
+          <div className="block md:hidden bg-gray-100 mb-5">
+            <SideBar filterHandler={filterHandler} filterValue={filterValue} />
+          </div>
+          {loading ? (
+            <div className="flex flex-wrap items-center justify-center">
+              <ReactLoading type="spinningBubbles" color="#3b82f6" />
+            </div>
+          ) : (
+            <Products product={product} />
+          )}
         </div>
       </div>
     </Layout>
