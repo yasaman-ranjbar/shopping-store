@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary: #88BE4C;
+  --secondary: #ff7380;
+  --mainWhite: #f6f6f6;
+  --mainBlack: #181818;
+  --mainTransition: all 0.3s liner;
+}
+
+body {
+  color: var(--mainBlack);
+  background-color: #f3f4f6;
+  font-family: 'arial';
+}
